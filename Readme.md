@@ -5,5 +5,5 @@
 ## macOS Setup
 
 ```bash
-curl -o- https://raw.githubusercontent.com/SukkaW/dotfiles/master/_install/macos.zsh | zsh
+curl -o- https://raw.githubusercontent.com/2PoL/dotfiles/master/_install/macOS.zsh | zsh
 ```
