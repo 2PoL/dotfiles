@@ -202,13 +202,31 @@ alias sudo='sudo '
 
 alias zshconfig="vim ~/.zshrc"
 alias rzsh=". ~/.zshrc"
+
+# Easier navigation: .., ..., ...., ....., ~ and -
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~" # `cd` is probably faster to type though
+alias -- -="cd -"
+
+# Shortcuts
+alias d="cd ~/Documents/Dropbox"
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias p="cd ~/projects"
+alias g="git"
+
 alias bu="brew upgrade"
 alias bi="brew install"
 alias bic="brew install --cask"
 alias bui="brew uninstall"
-alias bpb="brew bundle dump --file=~/brewfile"
+alias bpb="brew bundle dump --file=~/Brewfile"
+
 alias dooms="doom sync"
 alias doomu="doom upgrade"
+
 alias sshcopy="pbcopy < ~/.ssh/id_rsa.pub && echo Copied id_rsa.pub"
 
 alias q="cd $HOME && clear"
@@ -216,6 +234,12 @@ alias cp='cp -iv'          # Preferred 'cp' implementation
 alias mv='mv -iv'          # Preferred 'mv' implementation
 alias mkdir='mkdir -pv'    # Preferred 'mkdir' implementation
 alias rmrf="rm -rf"
+
+# Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; doom update; doom sync'
+
+# Show active network interfaces
+alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'"
 
 # function
 
